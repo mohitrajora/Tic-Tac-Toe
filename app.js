@@ -27,7 +27,7 @@ let checkWinner = () =>{
             && boxtexts[e[0]].innerText !==''){
                 document.querySelector('.info').innerText = boxtexts[e[0]].innerText + " Won!";
                 gameover = true;
-                document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "200px"
+                document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "150px"
             }
     })
 }
@@ -47,4 +47,17 @@ Array.from(boxes).forEach(element =>{
             }
         }
     })
+})
+
+// add click listner to reset button
+let reset = document.getElementsByClassName('reset')[0];
+reset.addEventListener('click', () => {
+    let boxtexts = document.querySelectorAll('.boxtext');
+    Array.from(boxtexts).forEach(element => {
+        element.innerText = '';
+    });
+    turn = 'X';
+    gameover = false;
+    document.getElementsByClassName('info')[0].innerText = "Turn For " + turn;
+    document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "0px";
 })
