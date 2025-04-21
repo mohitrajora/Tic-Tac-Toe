@@ -51,6 +51,18 @@ nav ul{
     font-size: 20px;
 }
 
+.line {
+    background-color: #ff4d4d;
+    width: 30vw;
+    height: 4px;
+    position: absolute;
+    top: 15vw;
+    left: 15vw;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.5s ease, top 0.5s ease, left 0.5s ease, rotate 0.5s ease;
+}
+
 .imgbox img {
     width: 0;
     height: auto; 
@@ -88,6 +100,12 @@ nav ul{
 .reset:hover{
     background-color: #fffae8;
     color: #1B2021;
+}
+
+/* Winner highlight */
+.winner-box {
+    background-color: #90ee90 !important;
+    transition: background-color 0.3s ease;
 }
 
 @media screen and (max-width : 650px) {
